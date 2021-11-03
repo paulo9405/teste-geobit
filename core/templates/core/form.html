@@ -1,27 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% load bootstrap %}
+
 <h1>Teste Geobit</h1>
 
+{% block main %}
 
     <form action="{% url 'upload_file' %}" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        {{form}}
-        <button type="submit" name="file">Upload</button>
+        {{form|bootstrap}}
+        <button class="btn btn-success" type="submit" name="file">Upload</button>
 
         {% if sucesso %}
-                <p>{{ sucesso }}</p>
+                <h5 class="text-success">{{ sucesso }}</h5>
         {% endif %}
 
     </form>
 
-    <a href="http://localhost:8000/">Acessar lista de Endpoints</a> <br>
-    <a href="lista_mulheres/">Acessar lista de mulheres</a> <br>
-    <a href="lista_pessoas/">Acessar lista de pessoas</a>
+    <div class="row">
+        <h1>
+            <a class="btn btn-primary btn-lg btn-block" href="http://localhost:8000/">Acessar Endpoints</a>
+            <a class="btn btn-primary btn-lg btn-block" href="lista_mulheres/">Acessar lista de mulheres</a>
+            <a class="btn btn-primary btn-lg btn-block" href="lista_pessoas">Acessar lista de pessoas</a>
+        </h1>
 
-</body>
-</html>
+    </div>
+
+{% endblock %}

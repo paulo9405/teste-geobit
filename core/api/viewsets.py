@@ -75,7 +75,7 @@ def upload_file(request):
                         numero=numero
                     )
                 if form.is_valid():
-                    sucesso = 'Upload realizado com sucesso'
+                    sucesso = 'Upload realizado com sucesso!'
                     form = DocumentForm()
                     return render(request, "core/form.html", {"form": form, 'sucesso': sucesso})
 
