@@ -1,4 +1,5 @@
 from django import forms
+import datetime
 from django_filters.rest_framework import DjangoFilterBackend
 from core.models import Pessoa
 from openpyxl import load_workbook
@@ -56,7 +57,7 @@ def upload_file(request):
                     sexo = val[3]
                     altura = val[4]
                     peso = val[5]
-                    nascimento = val[6]
+                    nascimento = datetime.datetime.fromtimestamp(val[6]).strftime('%Y-%m-%d')
                     bairro = val[7]
                     cidade = val[8]
                     estado = val[9]
