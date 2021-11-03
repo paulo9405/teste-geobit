@@ -8,7 +8,7 @@ class Pessoa(models.Model):
     sexo = models.CharField(max_length=1, choices=TIPO, null=True)
     altura = models.IntegerField()
     peso = models.DecimalField(max_digits=7, decimal_places=1)
-    nascimento = models.CharField(max_length=100, null=True) #TODO: converter para data
+    nascimento = models.CharField(max_length=100, null=True)
     bairro = models.CharField(max_length=100, null=True)
     cidade = models.CharField(max_length=100, null=True)
     estado = models.CharField(max_length=100, null=True)

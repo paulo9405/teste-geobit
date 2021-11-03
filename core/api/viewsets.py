@@ -57,7 +57,10 @@ def upload_file(request):
                     sexo = val[3]
                     altura = val[4]
                     peso = val[5]
-                    nascimento = datetime.datetime.fromtimestamp(val[6]).strftime('%Y-%m-%d')
+
+                    nascimento = datetime.datetime.fromtimestamp(val[6]).\
+                        strftime('%Y-%m-%d')
+
                     bairro = val[7]
                     cidade = val[8]
                     estado = val[9]
@@ -78,6 +81,7 @@ def upload_file(request):
                 if form.is_valid():
                     sucesso = 'Upload realizado com sucesso!'
                     form = DocumentForm()
-                    return render(request, "core/form.html", {"form": form, 'sucesso': sucesso})
+                    data = {"form": form, 'sucesso': sucesso}
+                    return render(request, "core/form.html", data)
 
             return redirect('core_geobit')
