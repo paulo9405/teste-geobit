@@ -12,5 +12,5 @@
 
 7 - Acessa o sistema "http://localhost:8000/geobit/".
 
-8 - Após acessar, faz os uploud do arquivo com os dados e logo após acessa os links que vão aparecer abaixo para consumiar a  api.
+8 - Após acessar, faz o upload do arquivo com os dados e logo após acessa os links que vão aparecer abaixo para consumir a  api.
 
