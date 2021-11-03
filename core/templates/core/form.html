@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Teste Geobit</h1>
+
+
+    <form action="{% url 'upload_file' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit" name="file">Upload</button>
+
+        {% if sucesso %}
+                <p>{{ sucesso }}</p>
+        {% endif %}
+
+    </form>
+
+    <a href="http://localhost:8000/">Acessar lista de Endpoints</a> <br>
+    <a href="lista_mulheres/">Acessar lista de mulheres</a> <br>
+    <a href="lista_pessoas/">Acessar lista de pessoas</a>
+
+</body>
+</html>
