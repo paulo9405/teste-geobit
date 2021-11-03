@@ -1,3 +1,5 @@
+<h2>Passos para rodar o sistema</h2>  
+
 1 - Clonar o projeto do GitHub.
 
 2 - Cria o ambiente de trabalho e ativa ele.
