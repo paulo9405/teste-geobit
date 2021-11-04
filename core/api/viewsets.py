@@ -45,7 +45,7 @@ def upload_file(request):
             for sheet in wb.worksheets:
                 for val in sheet.iter_rows(
                         min_row=5,
-                        max_row=21,
+                        max_row=31,
                         min_col=2,
                         max_col=12,
                         values_only=True):
